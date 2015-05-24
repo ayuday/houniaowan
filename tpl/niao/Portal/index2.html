@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$site_seo_title}-{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<link rel="shortcut icon" href="favicon.ico" /> 
+<link rel="stylesheet" href="{:sp_get_host()}/css/index.css" />
+<link rel="stylesheet" href="{:sp_get_host()}/css/public.css" />
+
+
+<link rel="stylesheet" href="{:sp_get_host()}/css/supersized.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{:sp_get_host()}/js/theme/supersized.shutter.css" type="text/css" media="screen" />
+
+
+
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+</div>
+
+<tc_include file="Public:book" />
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+
+<script type="text/javascript" src="{:sp_get_host()}/js/jquery.easing.min.js"></script>
+		
+<script type="text/javascript" src="{:sp_get_host()}/js/supersized.3.2.7.min.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/theme/supersized.shutter.min.js"></script>
+<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   3000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+					navigation				:	1,
+					thumbnail_navigation:1,
+					keyboard_nav			:	1,
+					slide_counter			:	1,
+/*
+参数说明：
+vertical_center：是否让图像垂直居中，如果为0，则图像为顶端对齐。
+slideshow：是否显示展示工具条，包括标题、图片数字和导航按钮。
+navigation：是否展示导航按钮。
+thumbnail_navigation：为1时可以通过单击缩略图导航切换图片，为0时，缩略图不显示。
+pause_hover：是否鼠标滑向图片时暂停图片切换。
+transition：图片切换效果，0-无，1-淡入淡出，2-向上滑动，3-向右滑动，4-向下滑动，5-向左滑动。
+slide_counter：是否显示切换图片的数字。
+slide_captions：是否显示图片标题。
+slide_interval：图片切换间隔时间（毫秒）
+slides：所切换的图片集合，包括图片地址image，图片标题title，图片链接url。
+autoplay：是否自动播放。
+transition_speed：切换速度，默认750。
+keyboard_nav：是否支持键盘操作切换。
+random：是否随机切换图片
+*/												   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'img/screen1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'img/screen1.jpg', url : 'http://www.houniaowan.com.cn/'},
+														{image : 'img/screen2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'img/screen2.jpg', url : 'http://www.houniaowan.com.cn/'},  
+														{image : 'img/screen3.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'img/screen3.jpg', url : 'http://www.houniaowan.com.cn/'},
+														{image : 'img/screen4.jpg', title : 'Image Credit: Colin Wojno', thumb : 'img/screen4.jpg', url : 'http://www.houniaowan.com.cn/'},
+														{image : 'img/screen5.jpg', title : 'Image Credit: Colin Wojno', thumb : 'img/screen5.jpg', url : 'http://www.houniaowan.com.cn/'},
+														{image : 'img/screen6.jpg', title : 'Image Credit: Colin Wojno', thumb : 'img/screen6.jpg', url : 'http://www.houniaowan.com.cn/'}
+												]
+					
+				});
+		    });
+		    
+		</script>
+
+<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+			
+			<a id="play-button"><img id="pauseplay" src="img/pause.png"/></a>
+		
+			<!--Slide counter-->
+			<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+			</div>
+			
+			<!--Slide captions displayed here-->
+			<div id="slidecaption"></div>
+			
+			<!--Thumb Tray button-->
+			<a id="tray-button"><img id="tray-arrow" src="img/button-tray-up.png"/></a>
+			
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+			
+		</div>
+</div>
+<!--全屏背景插件 end-->
+<script  type="text/javascript" src="{:sp_get_host()}/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/public.js"></script>
+</body>
+</html>
+
+

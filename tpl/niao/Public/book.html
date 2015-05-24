@@ -1,0 +1,111 @@
+<!--预订-->
+<div class="bookpan">
+<div class="book_tit">
+	<ul class="pull-right" id="main-menu-user">
+		<li class="dropdown user login">
+            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+            <img src="/statics/user/headicon.png" class="headicon"/>
+            <span class="user-nicename"></span><b class="caret"></b></a>
+            <ul class="dropdown-menu pull-right">
+               <li><a href="{:u('user/center/index')}"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
+               <li class="divider"></li>
+               <li><a href="{:u('user/index/logout')}"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
+            </ul>
+      	</li>
+      	<li class="dropdown user offline">
+            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+           		<img src="/statics/user/headicon.png" class="headicon"/>登录<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right">
+               <li><a href="{:U('api/oauth/login',array('type'=>'qq'))}"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
+               <li><a href="{:U('api/oauth/login',array('type'=>'sina'))}"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
+               <li><a href="{:u('user/login/index')}"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
+               <li class="divider"></li>
+               <li><a href="{:u('user/register/index')}"><i class="fa fa-user"></i> &nbsp;注册</a></li>
+            </ul>
+      	</li>
+	</ul>
+	<span class="b_tit">快捷预订通道</span>
+</div>
+<div class="book_cc">
+    <div class="bookbox">
+        <h3>你的预订</h3>
+        <form id="registerform" class="registerform" name="bookform" action="{:U('Book/index')}" method="post">
+        <dl>
+            <dt>预订类型</dt>
+            <dd>
+                <div class="select">
+                    
+                    <div class="selected"><span class="selected-txt">请选择预订类型</span><i></i></div>
+                    <ul>
+                        <li data-type="我要过冬">我要过冬</li>
+                        <li data-type="候鸟式养老">候鸟式养老</li>
+                        <li data-type="家庭旅游度假">家庭旅游度假</li>
+                    </ul>
+                    <input type="hidden" id="booktype" name="booktype" class="selected-value" value="">
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>居住时长</dt>
+            <dd>
+                <div class="select">
+                    
+                    <div class="selected"><span class="selected-txt">请选逗留时长</span><i></i></div>
+                    <ul>
+                        <li data-type="1月">1个月</li>
+                        <li data-type="2个月">2个月</li>
+                        <li data-type="3个月">3个月</li>
+                        <li data-type="4个月">4个月</li>
+                        <li data-type="5个月">5个月</li>
+                        <li data-type="6个月">6个月</li>
+                        <li data-type="一年">一年</li>
+                        <li data-type="时间不限">时间不限 </li>
+                    </ul>
+                    <input type="hidden" id="duration" name="duration" class="selected-value" value="">
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>抵达日期</dt>
+            <dd><input type="text" id="arrivedate" name="arrivedate" class="date radius _calendar Validform_error" datatype="*6-16"   errormsg="请输入正确预计抵达日期！" placeholder="预计到北海日期" nullmsg="请输入您预计抵达日期！" value=""></dd>
+        </dl>
+        <dl>
+            <dt>姓名</dt>
+            <dd><input type="text" id="name" name="name" class="radius Validform_error" placeholder="你的姓名" datatype="s2-4" errormsg="姓名至少2个字符,最多4个字符！" nullmsg="请输入您的姓名！" value=""></dd>
+        </dl>
+        <dl>
+            <dt>手机</dt>
+            <dd><input type="text" id="tel" name="tel" class="radius" placeholder="手机号" datatype="m" nullmsg="请输入您的手机号码！" value=""></dd>
+        </dl>
+        <dl>
+            <dt>QQ</dt>
+            <dd><input type="text" id="qq" name="qq" placeholder="QQ号码" class="radius" value=""></dd>
+        </dl>
+        <dl>
+            <dt>留言</dt>
+            <dd><textarea id="content" name="content" placeholder="简单描述您的需求或问题" class="radius"></textarea></dd>
+        </dl>
+        <dl>
+            <dt>&nbsp;</dt>
+            <dd><input type="submit" value="立即预订" class="btn radius"></dd>
+        </dl>
+        </form>
+        
+        
+        
+    </div>
+</div>
+<div class="bookswitch"><span class="switchtxt">展开</span><i></i></div>
+</div>
+<link rel="stylesheet" href="{:sp_get_host()}/js/validform/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="{:sp_get_host()}/js/validform/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/validform/passwordStrength-min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".registerform").Validform();  //就这一行代码！;
+})
+</script>
+
+<link href="/css/font-awesome/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+<!--[if IE 7]> <link rel="stylesheet" href="/css/font-awesome/css/font-awesome-ie7.min.css"> <![endif]-->

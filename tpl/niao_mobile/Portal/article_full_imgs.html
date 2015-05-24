@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{$post_title}-{$site_name}</title>
+<meta name="keywords" content="{$post_keywords}" />
+<meta name="description" content="{$post_excerpt}">
+<link rel="stylesheet" href="{:sp_get_host()}/phone/css/phone.css">
+</head>
+<body>
+<tc_include file="Public:head" />
+
+	<div id="header" class="head">
+		<div class="wrap">
+			<i class="menu_back"><a href="m.html"></a></i>
+			<div class="title">
+				<span class="title_d"><p>{$post_title}</p></span>
+				<div class="clear"></div>
+			</div>
+			<i class="menu_share"></i>
+		</div>
+	</div>
+	
+	<div id="container">
+		<div id="content">
+						
+			<div id="works">
+				<div class="pd5">
+					<div id="article">
+						{$post_content}
+					</div>
+						
+					<div class="works_info">
+						<div class="pd10">10-12年间做的部分网页...</div>
+					</div>
+										<div class="clear"></div>
+										
+				</div>
+			</div>
+									
+		</div>
+	</div>
+	
+	
+	
+
+
+	
+	
+	<div id="share">
+		<div class="share_msk"></div>
+		<div class="share">
+			<table width="100%" cellspacing="10" border="0">
+				<tr>
+					<td class="sina"><a href="http://service.weibo.com/share/share.php?url=/post/3377/&title=%E7%AE%80%E6%B4%81%E7%BD%91%E9%A1%B5%E5%8D%95%E9%A1%B5(%E5%90%ABPSD%E6%96%87%E4%BB%B6)&pic=http://cdn.uehtml.com/201401/1389608264889.jpg&appkey=3206975293" target="_blank"></a></td>
+					<td class="guangbo"><a href="http://share.v.t.qq.com/index.php?c=share&a=index&url=/post/3377/&title=%E7%AE%80%E6%B4%81%E7%BD%91%E9%A1%B5%E5%8D%95%E9%A1%B5(%E5%90%ABPSD%E6%96%87%E4%BB%B6)&pic=http://cdn.uehtml.com/201401/1389608264889.jpg&appkey=3206975293" target="_blank"></a></td>
+					<td class="facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=/post/3377/&t=%E7%AE%80%E6%B4%81%E7%BD%91%E9%A1%B5%E5%8D%95%E9%A1%B5(%E5%90%ABPSD%E6%96%87%E4%BB%B6)&images=http://cdn.uehtml.com/201401/1389608264889.jpg"></a></td>
+					<td class="twitter"><a target="_blank" href="http://twitter.com/share?text=%E7%AE%80%E6%B4%81%E7%BD%91%E9%A1%B5%E5%8D%95%E9%A1%B5(%E5%90%ABPSD%E6%96%87%E4%BB%B6)&url=/post/3377/&pic=http://cdn.uehtml.com/201401/1389608264889.jpg"></a></td>
+				</tr>
+			</table>
+			<div class="pd10">
+				<div class="cancel_share"><a href="" onclick="return false;">取消分享</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="loading_dark"></div>
+	<div id="loading_mask">
+		<div class="loading_mask">
+			<ul class="anm">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+<tc_include file="Public:script" />
+</body>
+</html>

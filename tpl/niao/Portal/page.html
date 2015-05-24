@@ -1,0 +1,42 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$post_title}-{$site_name}</title>
+<meta name="keywords" content="{$post_keywords}" />
+<meta name="description" content="{$post_excerpt}">
+<link rel="stylesheet" href="{:sp_get_host()}/css/public.css" />
+<script type="text/javascript" src="{:sp_get_host()}/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+  
+<div class="bg fixed"><img src="{:sp_get_host()}/images/bg1.jpg" widht="1920" height="1078" alt="{$site_name}"></div>
+</div>
+
+<div class="sub-right-over pa">	
+   
+        <div class="sub-content-con sub-about contain">
+        	<div class="sub-title article-title">{$post_title}</div>
+        	<div class="article-line"></div>
+            <div class="article">
+		 	{$post_content}
+			</div>   
+        </div> 
+</div>
+
+
+
+<tc_include file="Public:book" />
+
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+
+</body>
+<script type="text/javascript" src="{:sp_get_host()}/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/public.js"></script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$post_title}-{$site_name}</title>
+<meta name="keywords" content="{$post_keywords}" />
+<meta name="description" content="{$post_excerpt}">
+<link rel="stylesheet" href="{:sp_get_host()}__ROOT_/css/index.css" />
+<link rel="stylesheet" href="{:sp_get_host()}__ROOT_/css/public.css" />
+<script type="text/javascript" src="{:sp_get_host()}__ROOT_/js/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+<div class="bg"><img src="{:sp_get_host()}__ROOT__/images/bg1.jpg" widht="1920" height="1078" alt="{$site_name}"></div>
+</div>
+
+<div class="j-booking-hide sub-right pa">
+	
+    <div class="contain" id="content_Sroll">
+        <div class="sub-content-con sub-about">
+        <div class="sub-title article-title">{$post_title}</div>   
+        	<div class="small"><small>发布时间：{$post_date}</small> <small>来源：<a href="{:sp_get_host()}">候鸟湾</a></small> <small>阅读：{$post_hits} 次</small></div>
+            <div class="article">
+        	
+            {$post_content}
+            
+            
+            </div>
+        </div>
+    </div>  
+</div>
+
+<tc_include file="Public:book" />
+
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+</body>
+<script type="text/javascript" src="{:sp_get_host()}__ROOT__/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}__ROOT__/js/public.js"></script>
+<link href="{:sp_get_host()}__ROOT__/js/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="{:sp_get_host()}__ROOT__/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$(window).load(function(){
+		$("#content_Sroll").mCustomScrollbar({
+			scrollButtons:{
+				enable:true
+			},
+			theme:"dark" /*"light", "dark", "light-2", "dark-2", "light-thick", "dark-thick", "light-thin", "dark-thin"*/
+		});
+	});
+})(jQuery);
+</script>
+</html>

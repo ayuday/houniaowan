@@ -1,0 +1,152 @@
+@charset "utf-8";
+html, body{width: 100%;height: 100%;overflow: hidden;}
+.main{bottom: 85px;left: 0;width: 100%;height: 141px;}
+.btn-360{top: 50%;left: 50%;z-index: 120;margin-top:-72px;margin-left:-81px;}
+.main-left{bottom:80px;left: 0;z-index: 100;width: 875px;height: 147px;background: url(../images/bg1.png) 0 0 no-repeat;}
+.main-activity, .main-activity-img li{width: 211px;height: 147px;overflow: hidden;}
+.main-activity-btn{bottom: 13px;right: 8px;z-index: 100;width: 47px;height: 17px;background: url(../images/btn2.gif) 0 0 no-repeat;}
+.main-activity-btn li{float: left;width: 23px;height: 17px;overflow: hidden;}
+.main-activity-btn a{display: block;line-height: 99px;text-indent: -99px;overflow: hidden;}
+.main-club .num{color: #87a8be;}
+.main-club .num span{font-size: 22px;font-family: "Myriad Pro";color: #87a8be;}
+.main-club .join{color: #707070;}
+.main-club .join a{color: #747774;}
+.main-news{height: 141px;border-left: #444744 dashed 1px;}
+.main-news-recommend{width: 145px;color: #747673;}
+.main-news-recommend .title a{color: #88aac0;}
+.main-news-recommend .date{color: #444343;}
+.main-right{right: 25px;bottom:88px;z-index: 100;}
+.welcome-logo{top:30px; right:40px; z-index:100;}
+.welcome-content{height:735px;}
+.welcome-content .sanya{top:120px; left:355px; z-index:99;}
+.welcome-content .xiangshuiwan{top:265px; left:714px; z-index:100;}
+.welcome-content .qixianling{top:188px; left:1055px; z-index:99;}
+.welcome-tips .li1{font-size:14px; color:#a9acaf;}
+.welcome-tips .li2{font-size:10px; color:#a9acaf;}
+/*新增*/
+
+.kefang{position:absolute;padding-left:39px;padding-top:36px;padding-right:30px;height:358px;width:50%;background: url(../images/tm.png);}
+.kefang .kefang_title .p1{font-size:30px;font-family:"宋体";color:#FFF;}
+.kefang .kefang_title .p2{margin-top:-3px;font-size:20px;font-family:"宋体";color:#FFF;}
+.kefang .kefang_xingxi{padding-top:32px;}
+.xingxi_time p{padding-bottom:3px;color:#FFF;}
+.xingxi_time .text1{padding:3px 3px 3px 14px;width:168px;height:21px;line-height:21px;color:#9c9c9c;border:none;background:url(../images/bg5.png) 0 0 no-repeat;}
+.xuanx p{padding-left:5px;padding-bottom:3px;color:#FFF;}
+.xuanx .select1{width:100px;height:21px;border:none;background:#FFF;}
+.xuanx .fangj{padding:3px;background: url(../images/bg6.png) 0 0 no-repeat;}
+.kefang_xingxi .submit1{width:123px;height:32px;font-size:14px;font-weight:bold;color:#FFF;text-align:center;vertical-align:middle;border:none;background:url(../images/bg7.png) 0 0 no-repeat;}
+.kefang .yuzhi{margin-left:17px;color:#a8aeb0;}
+.kefang .yuzhi:hover{text-decoration:underline;}
+.kefang .tishi{text-align:right;color:#fff;}
+.kefang .tishi a{margin-left:3px;color:#b5ff36;}
+.kefang .tishi a:hover{text-decoration:underline;}
+.kefang .anniu{position: absolute;right:-43px;top:14px;width:43px;height:149px;overflow:hidden;/*text-indent:-999px;*/cursor:pointer;background:url(../images/bg2111.png) 0 0 no-repeat;}
+.menu_kefang{width:15px; height:100px; padding-left:13px; padding-top:15px; color:#FFF; font-size:17px; font-family:'微软雅黑'}
+.kefang .anniu1{background:url(../images/bg2111.png) 0 -151px no-repeat;}
+
+/*关于我们*/
+.wai_content{position:relative;height:500px;overflow:hidden;}
+.content_nei .nei_title{font-size:34px;font-family:"宋体";color:#101010;}
+.nei_info .nei_map{width:400px;height:218px;overflow:hidden;}
+.nei_con p{color:#333333;}
+.nei_con .diz{width:251px;}
+.nei_con .zip span{color:#989898;}
+.nei_con .phone{padding-left:49px;height:40px;background: url(../images/icon6.png) 0 0 no-repeat;}
+.phone .name{color:#989898;}
+.nei_con .fax{padding-left:49px;height:40px; background: url(../images/icon6.png) 0 -52px no-repeat;}
+.fax .name{color:#989898;}
+.nei_con .email{padding-left:49px;height:40px; background: url(../images/icon6.png) 0 -104px no-repeat;}
+.email .name{color:#989898;}
+.scrCont{position:absolute;top:0;left:0;width:505px;}
+.scrPanel{position:absolute;top:0;right:8px;bottom:0;left:auto;width:1px;background:#d7d7d7;}
+.scrZone{position:absolute;top:0;left:0;width:100%;height:100%;}
+.scrHand{position:absolute;top:0;left:-4px;width:9px;height:36px;cursor:pointer;background: url(../images/icon7.gif) 0 0 no-repeat;}
+.news-list .service-list-left{width:230px;}
+/*服务于措施*/
+.content_nei .nei_hotel{padding-top:30px;padding-right:44px;}
+.hotel_eat .list{margin-left:90px;display:block;}
+.hotel_eat .list li{margin-bottom:10px;padding-left:36px;height:29px;line-height:29px;overflow:hidden;}
+.hotel_eat .list li a{color:#333333;}
+.hotel_eat .list li a:hover{text-decoration:underline;}
+.hotel_eat .list .li1{background:url(../images/bg11.png) 0 0 no-repeat;}
+.hotel_eat .list .li2{background:url(../images/bg11.png) 0 -39px no-repeat;}
+.hotel_eat .list .li3{background:url(../images/bg11.png) 0 -78px no-repeat;}
+.hotel_eat .list .li4{background:url(../images/bg11.png) 0 -117px no-repeat;}
+.nei_hotel .hotel_eat{padding-bottom:11px;border-bottom:1px dashed #bfbfbf;}
+/*目的资讯*/
+.aim_list li{margin-bottom:18px;padding-bottom:16px;border-bottom:1px dashed #bfbfbf;}
+.full{padding-right:28px;width:344px;}
+.full .title{display:block;font-size:14px;color:#333333}
+.full .title:hover{text-decoration:underline;}
+.full p{margin-top:10px;height:45px;color:#989898;}
+.end .end_a1{display:block;width:60px;height:19px;color:#FFF;text-align:center;background:#8aa5b7}
+.end span{color:#b8b8b8}
+/*客房详细*/
+.contact-map{width:400px; height:218px; overflow:hidden;}
+.contact-con .address{padding-left:10px; width:245px;}
+.contact-con .zip span{color:#989898;}
+.contact-con .name{padding:3px 0; color:#989898;}
+.contact-con p{color:#333333;}
+.contact-con .contact-list{margin-top:18px; padding-left:55px; height:40px;}
+.contact-con .tel{background:url(../images/icon6.png) 10px 0 no-repeat;}
+.contact-con .fax{background:url(../images/icon6.png) 10px -52px no-repeat;}
+.contact-con .email{background:url(../images/icon6.png) 10px -104px no-repeat;}
+.room-con-top .title{font-family:"宋体";font-size:16px;color:#333333;}
+.room-con-top .fr{bottom:13px;right:8px;z-index:100;width:47px;height:17px;background: url(../images/btn2.gif) 0 0 no-repeat;}
+.room-con-top .fr li{float:left;width:23px;height:17px;overflow:hidden;}
+.room-con-top .fr a{display:block;text-indent:-99px;overflow:hidden;}
+.room-con-price .price{color:#da1b17;}
+.room-con-price .price span{font-size:18px;}
+.room-con-price .activity-book{width:95px;height:32px;overflow:hidden;background:url(../images/icon.png) 0 0 no-repeat;}
+.room-con-price .activity-book a{display:block;width:95px;height:32px;line-height:32px;font-size:14px;font-weight:bold;color:#fff;text-align:center;}
+.room-con-bed{color:#89abc1;}
+.room-con-bed span{padding:0 8px;color:#bfbfbf;}
+.room-con-content{line-height:18px;color:#777777;border-bottom:#bfbfbf dashed 1px;}
+.room-con-ubb .title{font-size:14px; color:#333333;}
+.room-con-ubb .content li{padding-left:8px; color:#777777; background: url(../images/icon3.gif) 0 -135px no-repeat;}
+/*每日活动*/
+.activity_ul li{margin-bottom:20px;padding-bottom:16px;border-bottom:1px dashed #c9c9c9;}
+.activity_ul a{display:block;font-size:14px;color:#333333;}
+.activity_ul a:hover{text-decoration:underline;}
+.activity_ul .neir{margin-top:10px;color:#989898;height:38px;}
+.activity_ul .time{color:#b8b8b8;}
+.activity_ul .time span{display:inline-block;height:19px;width:60px;text-align:center;color:#fff;line-height:19px;background:#8aa5b7;}
+/*优惠精选*/
+.preferential_list{}
+.room-activity{width:450px;}
+.room-activity li{float:left;margin:0 45px 20px 0;padding-bottom:15px;width:179px;border-bottom:#bfbfbf dashed 1px;}
+.room-activity .activity-price{color:#da1b17;}
+.room-activity .activity-price span{font-size:18px;}
+.activity-title a{font-size:14px;color:#333333;}
+.activity-title a:hover{text-decoration:underline;}
+.activity-img{width:179px;height:123px;overflow:hidden;}
+.activity-content{height:40px;line-height:18px;color:#989898;}
+.activity-con-img,.activity-con-img li{width:400px;height:246px;overflow:hidden;}
+.activity-con-txt .con-txt-left{padding-right:35px;width:228px;border-right:#bfbfbf dashed 1px;}
+/*需求定制*/
+.party-book-form .name span{margin-left:5px;}
+.party-book-form .name{padding-bottom:5px;line-height:18px;color:#777777;}
+.book-select{padding:1px;background:url(../images/btn1.gif) 0 -120px no-repeat;}
+.book_select1{border:none;width:188px;height:21px;}
+.book-input{padding-left:10px;width:178px;height:21px;line-height:21px;color:#9c9c9c;border:#b7d2e6solid 1px; background:#ffffff;}
+.book-input1{background:url(../images/icon5.gif) 167px 4px no-repeat #fff;}
+.party-book-form li{float:left;width:100%;padding-bottom:15px;padding-bottom:12px;}
+.book-area{padding:10px;width:378px;height:55px;resize:none;border:1px solid #B7D2E6;}
+.book-radio{margin-top:2px;margin-right:5px;}
+.search-btn, .book-btn{height: 32px; width: 123px; line-height: 32px;font-size:14px;font-weight:bold;color: #FFFFFF;border:none;background: url(../images/btn1.gif) no-repeat -161px -54px;}
+.fl .p1{height:20px;line-height:20px;}
+.fl .span1{display:block;}
+/*潺 SPA*/
+.spa_con .title{font-size:18px;color:##404040;}
+.spa_con .con{padding-top:10px;color:#777777;}
+/*客房和精选详细*/
+.con-txt-left .title{font-size:18px;color:#333333;}
+.con-txt-left .date{color:#89abc1;}
+.con-txt-right{width:95px;}
+.activity-book a{display:block;width:95px;height:32px;line-height:32px;font-weight:bold;color:#fff;background: url(../images/icon.png) 0 0 no-repeat;}
+.con-txt-right .activity-price{color:#DA1B17;}
+.con-txt-right .activity-price span{font-size:18px;}
+/*酒店美食*/
+.eat_con .title{font-size:16px;}
+.eat_con .title span{font-size:12px;color:#B8B8B8;}
+.eat_con .con{color:#777777;}

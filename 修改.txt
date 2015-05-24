@@ -1,0 +1,30 @@
+ip转地理位置
+\application\Common\Common\extend.php
+
+编辑器样式
+\statics\js\ueditor\themes
+
+
+编辑器默认弹出地图为 北海市
+\statics\js\ueditor\dialogs\map\map.html
+\statics\js\ueditor\lang\zh-cn\zh-cn.js
+
+增加应用模块
+\application\Common\Conf\config.php
+
+
+
+文章自定义模板
+\tpl_admin\simpleboot\Portal\AdminPost\edit.html
+\application\Portal\Controller\ArticleController.class.php
+\application\Portal\Controller\AdminPostController.class.php
+增加SQL字段：
+ALTER TABLE `sp_posts`  ADD `one_tpl` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '文章自定义模板';
+
+
+图上上传去域名和后缀
+\application\Asset\Controller\UeditorController.class.php
+
+
+开启在线图片管理和图片搜索
+\statics\js\ueditor\dialogs\image\image.html

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$name} {$seo_title} {$site_name}</title>
+<meta name="keywords" content="{$seo_keywords}" />
+<meta name="description" content="{$seo_description}">
+<link rel="stylesheet" href="{:sp_get_host()}/css/public.css" />
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+<div class="bg fixed"><img src="{:sp_get_host()}/images/bgimg01.jpg" widht="1920" height="1078" alt="{$site_name}"></div>
+</div>
+
+<div class="sub-right-over pa">	
+   
+        <div class="sub-content-con sub-about contain">
+        	<div class="sub-title article-title">{$name}</div>
+        	<div class="article-line"></div>
+           
+ 				<div class="list_video change-color">
+				<php>
+					//每页显示文章数
+					$pagesize = 18; 
+
+					//分页模板，例："{first}{prev}{liststart}{list}{listend}{next}{last}"
+
+					$pagetpl = "{first}{prev}{liststart}{list}{listend}{next}{last}"; 
+					
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:istop DESC,recommended DESC,post_date DESC;",$pagesize,$pagetpl);
+					
+				</php>
+				<volist name="lists['posts']" id="vo">
+				<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+				<dl>
+					<dt class="worksimg">
+						<a href="{:leuu('article/index',array('id'=>$vo['tid']))}" target="_blank">
+						<if condition="empty($smeta['thumb'])"> 
+						<img src="{:sp_get_host()}__ROOT__/images/default_img.png" class="thumb" width="240" height="160" alt="{$vo.post_title}"/>
+						<else /> 
+						<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="ithumb" width="240" height="160" alt="{$vo.post_title}" />
+						</if>
+						<span class="wzoom wzooms"></span>
+						</a>
+					</dt>
+					<dd class="title">
+						<h4><a href="{:leuu('article/index',array('id'=>$vo['tid']))}" target="_blank">{$vo.post_title}</a></h4>
+					</dd>
+					<dd class="a1"></dd><dd class="a2"></dd><dd class="a3"></dd><dd class="a4"></dd><dd class="a5"></dd>
+				</dl>
+				</volist>
+				</div>
+
+				<div class="pagination">
+				<ul>
+					{$lists['page']}
+				</ul>
+				</div>
+
+        </div> 
+</div>
+
+
+
+<tc_include file="Public:book" />
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+<script type="text/javascript" src="{:sp_get_host()}/js/jquery.animate-colors-min.js"></script>
+<script  type="text/javascript" src="{:sp_get_host()}/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$post_title}-{$site_name}</title>
+<meta name="keywords" content="{$post_keywords}" />
+<meta name="description" content="{$post_excerpt}">
+<link rel="stylesheet" href="{:sp_get_host()}/css/public.css" />
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+  
+<div class="bg fixed"><img src="{:sp_get_host()}/images/bgimg02.jpg" widht="1920" height="1078" alt="{$site_name}"></div>
+</div>
+
+<div class="sub-right-over pa">	
+   
+        <div class="sub-content-con sub-about contain">
+        	<div class="sub-title article-title">{$post_title}</div>
+        	
+<div class="small"><small>发布时间：<php>echo date("Y-m-d",strtotime($post_date));</php></small> <small>来源：<a href="{:sp_get_host()}">候鸟湾</a></small> <small>发布者：明天</small><small>阅读：{$post_hits} 次</small>
+
+<div class="sharebox">分享到：
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+
+</div>
+
+            <div class="article">
+		 	{$post_content}
+
+		 	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="{$post_tid}" data-title="{$post_title}" data-url="{:leuu('protal/article/index',array('id'=>$article_id))}}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"hnw"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+			</div>   
+        </div> 
+</div>
+
+
+<tc_include file="Public:book" />
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+
+<script type="text/javascript" src="{:sp_get_host()}/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/public.js"></script>
+</body>
+</html>

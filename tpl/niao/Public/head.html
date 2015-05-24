@@ -1,0 +1,85 @@
+
+<script type="text/javascript" src="{:sp_get_host()}/js/jquery-1.8.3.min.js"></script>
+<div class="leftsidebar">
+                <div class="external">
+                    <div class="logo"><a href="/"><img src="{:sp_get_host()}__ROOT__/images/logo.png" width="128" height="112" alt="{$site_name}"></a></div>
+                    <div class="tianqi">
+                    	<p>
+                    	<span id="city"></span>
+                    	<span class="weather_res_dis_img" id="T_weather_img"></span>
+                    	<span id="M_weather"></span>
+                    	</p>
+                    	<p>
+                    	<span id="T_temperature" ></span>
+                    	<span id="T_direction"></span>
+                    	<span  id="M_wind"></span>
+                    	</p>
+                    </div>
+<script type="text/javascript" src="{:sp_get_host()}/js/weather.js"></script>
+<script type="text/javascript">
+//创建天气预报核心对象
+
+$.ajaxSetup({ scriptCharset: "gb2312", contentType: "application/json; charset=utf-8" });
+var weather_ = new weather();
+city = "北海";
+weather_.getWeather(city);
+</script>
+
+
+
+                    <div class="nav">
+                        <ul>
+                            <li><a href="/">网站首页</a></li>
+                            <li><a href="{:leuu('portal/list/index',array('id'=>1))}">旅游度假</a></li>
+                            <li><a href="{:leuu('portal/list/index',array('id'=>2))}">过冬基地</a></li>
+                            <li><a href="{:leuu('portal/list/index',array('id'=>3))}">吃喝玩乐</a></li>
+                            <li><a href="{:leuu('portal/list/index',array('id'=>4))}">实拍视频</a></li>
+                            <li><a href="{:leuu('portal/list/index',array('id'=>9))}">旅游景点</a></li>  
+                            <li><a href="{:leuu('portal/list/index',array('id'=>6))}">新闻动态</a></li>                          
+                            <li><a href="{:leuu('portal/list/index',array('id'=>7))}">养生保健</a></li>
+                            <li><a href="{:leuu('portal/page/index',array('id'=>3))}">服务保障</a></li>
+                            <li><a href="{:leuu('portal/page/index',array('id'=>1))}">关于我们</a></li>
+                   
+                           
+                        </ul>
+                    </div><!--nav end -->
+                    <div style=" width:212px; height:143px; overflow:hidden;"><img width="208" height="143" src="{:sp_get_host()}__ROOT__/images/bg14.png" alt="北海过冬候鸟基地"></div>
+                </div>
+</div><!--leftsidebar end -->
+            
+<div class="kf" style="height:100%; width:100%;">            	
+   
+
+
+    <div class="suite7 c suite">
+        <ul class="fl c">
+            <li><a href="food.html">餐厅</a></li>
+            <li><a href="food_bar.html">酒廊及酒吧</a></li>
+        </ul>
+    </div><!--suite7 end -->
+    
+    <div class="suite8 c suite">
+        <ul class="fl c">
+            <li><a href="party.html">宴会与服务</a></li>
+            <li><a href="party_sqm.html">会议室</a></li>
+            <li><a href="party_wedd.html">浪漫婚礼</a></li>
+        </ul>
+    </div><!--suite8 end -->
+    
+    <div class="suite9 c suite">
+        <ul class="fl c">
+            <li><a href="spa.html">潺 spa</a></li>
+            <li><a href="spa_project.html">体验套餐</a></li>
+            <li><a href="spa_hand.html ">手足护理</a></li>
+            <li><a href=" spa_body.html">身体养护</a></li>
+            <li><a href=" spa_face.html">面部护理</a></li>
+            <li><a href=" spa_anmu.html">按摩护理</a></li>
+            <li><a href=" spa_star.html">特色明星项目</a></li>
+        </ul>
+    </div><!--suite9 end -->
+    
+ 
+    
+</div>
+            
+                       

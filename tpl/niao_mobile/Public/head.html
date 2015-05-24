@@ -1,0 +1,141 @@
+<div id="menu">
+	<div class="search_wrap">
+		<form action="list/" method="post">
+			<input type="text" name="search" class="search_input" placeholder="关键字查找">
+			<i class="reset_input"><i></i></i>
+		</form>
+	</div>
+	<ul>
+		<li class="nav_index menu_cur"><a href="#"><i></i><span>首页</span><b></b><div class="clear"></div></a></li>
+		<li class="nav_site"><a href="/designers?sort=rec"><i></i><span>设计师</span><b></b><div class="clear"></div></a></li>
+		<li class="nav_help"><a href="/list/bangmang/"><i></i><span>帮帮忙</span><b></b><div class="clear"></div></a></li>
+		<li class="nav_about"><a href="/about"><i></i><span>关于我们</span><b></b><div class="clear"></div></a></li>
+	</ul>
+</div>
+
+
+<!-- 登陆后 -->
+<div id="user" class="islogin">
+		<div class="user_panel">
+			<div class="user_menu">
+				<div class="my_avatar">
+					<a class="my_home" href="#"><img src="/phone/images/100.jpg"></a>
+					<h4><a href="#" class="userid">Ayumi</a></h4>
+					<p>个人描述</p>
+				</div>
+				<table width="100%" cellspacing="0" border="0">
+					<tbody><tr>
+						<td>
+							<dl class="fans">
+								<dt></dt>
+								<dd>528</dd>
+							</dl>
+						</td>
+						<td class="user_menu_c">
+							<dl class="care">
+								<dt></dt>
+								<dd>364</dd>
+							</dl>
+							<div class="has_line_left"></div><div class="has_line_right"></div>
+						</td>
+						<td>
+							<dl class="favorites">
+								<dt></dt>
+								<dd>263</dd>
+							</dl>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+		<ul id="user_menu">
+
+			<li class="menu_msg">
+				<a href="">
+					<div class="fl">
+						<i></i>
+						<span>私信</span>
+					</div>
+					<div class="fr">
+																	</div>
+					<div class="clear"></div>
+				</a>
+			</li>
+
+			<li class="menu_system">
+				<a href="settings/index/">
+					<div class="fl">
+						<i></i>
+						<span>系统消息</span>
+					</div>
+					<div class="fr">
+																	</div>
+					<div class="clear"></div>
+				</a>
+			</li>
+
+			<li class="menu_comment">
+				<a href="logout">
+					<div class="fl">
+						<i></i>
+						<span>评论消息</span>
+					</div>
+					<div class="fr">
+																	</div>
+					<div class="clear"></div>
+				</a>
+			</li>
+			
+			<li class="menu_logout">
+				<a href="{:u('user/index/logout')}">
+					<div class="fl">
+						<i></i>
+						<span>退出登录</span>
+					</div>
+					<div class="fr">
+					</div>
+					<div class="clear"></div>
+				</a>
+			</li>
+			
+		</ul>
+		
+</div>
+<!-- 登陆后End -->
+
+
+
+
+<!-- 登陆前 -->
+<div id="user" class="nologin">
+	<div class="account">
+		<div class="login_b_t">
+			<div class="pd10">
+				<div class="fl">还没有账号<a id="reg_now" href="{:U('user/register/index')}">立即注册</a></div><div class="fr"><a href="{:U('user/login/forgot_password')}">忘记密码?</a></div><div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="pd10">
+		<form class="form-horizontal J_ajaxForms" action="{:U('user/login/dologin')}" method="post">
+			<div class="login_b_i">
+				<div class="login_input">
+					<div class="login_user"><input type="text" id="input_username" name="username" placeholder="邮箱/帐号"><i></i></div>
+					<div class="login_user"><input type="password" id="input_password" name="password" placeholder="密码"><i></i></div>
+					<div class="login_password verify"><input type="text" id="input_verify" name="verify" class="verify_code" placeholder="请输入验证码"><i>{:sp_verifycode_img('length=4&font_size=16&width=100&height=32&charset=1234567890')}</i></div>
+
+						
+							
+				</div>
+			</div>
+			<input type="hidden" name="terms" value="1">
+			<button type="submit" class="login_submit">登录</button>
+		</form>
+		<div class="login_quick">
+			<p>用第三方帐号直接登录</p>
+			<a href="{:U('api/oauth/login',array('type'=>'sina'))}" id="weibo_app"><span><i></i>微博登录</span></a>
+			<a href="{:U('api/oauth/login',array('type'=>'qq'))}" id="qq_connect"><span><i></i>QQ登录</span></a>
+		</div>
+	</div>
+</div>
+<!-- 登陆前 -->
+

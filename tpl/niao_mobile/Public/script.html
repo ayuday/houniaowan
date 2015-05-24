@@ -1,0 +1,26 @@
+<script src="http://cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
+<script src="{:sp_get_host()}/phone/js/phone.js"></script>
+<script type="text/javascript">
+;
+(function($){
+
+	$.post("{:U('user/index/is_login')}",{},function(data){
+			if(data.status==1){
+				if(data.user.avatar){
+					$(".my_home").attr("src",data.user.avatar.indexOf("http")==0?data.user.avatar:"__UPLOAD__avatar/"+data.user.avatar);
+				}
+				
+				$(".userid").text(data.user.user_nicename!=""?data.user.user_nicename:data.user.user_login);
+				$(".islogin").show();
+				$(".nologin").hide();
+			}
+			if(data.status==0){
+				$(".nologin").show();
+				$(".islogin").hide();
+			}
+			
+	});	
+
+
+})(Zepto)
+</script>

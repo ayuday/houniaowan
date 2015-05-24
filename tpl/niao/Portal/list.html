@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$name} {$seo_title} {$site_name}</title>
+<meta name="keywords" content="{$seo_keywords}" />
+<meta name="description" content="{$seo_description}">
+<link rel="stylesheet" href="{:sp_get_host()}/css/index.css" />
+<link rel="stylesheet" href="{:sp_get_host()}/css/public.css" />
+</head>
+<body>
+<div class="container">
+<tc_include file="Public:head" />
+<div class="bg"><img src="{:sp_get_host()}/images/bg1.jpg" widht="1920" height="1078" alt="{$site_name}"></div>
+</div>
+
+<div class="j-booking-hide sub-right pa">
+	
+    <div class="contain" id="content_Sroll">
+        <div class="sub-content-con sub-about">
+        <div class="sub-title">{$name}</div>   
+            <ul class="party-service-list">
+            	<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",10);
+				</php>
+				<volist name="lists['posts']" id="vo">
+				<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+                <li class="c">
+                    <div class="service-list-left fl">
+                        <p class="service-title f14"><a href="{:leuu('article/index',array('id'=>$vo['tid']))}" target="_blank">{$vo.post_title}</a></p>
+                        <p class="content pt5">{$vo.post_excerpt}...<a href="{:leuu('article/index',array('id'=>$vo['tid']))}" class="more" target="_blank">[详情]</a></p>
+                        <p class="price pt5 fb"><span>
+                     </span></p>
+                    </div>
+                    <!--service-list-left end-->
+                    <div class="service-list-right fr">
+                    	<a href="{:leuu('article/index',array('id'=>$vo['tid']))}" target="_blank">
+                    		
+                    		<if condition="empty($smeta['thumb'])"> 
+							<img src="{:sp_get_host()}/images/default_img.png" class="thumb" width="134" height="93" alt="{$vo.post_title}"/>
+							<else /> 
+							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="ithumb" width="134" height="93" alt="{$vo.post_title}" />
+							</if>
+                    	</a></div>
+                    <!--service-list-right end--> 
+                </li>
+                </volist>  
+            </ul>
+            <!--party-service-list end--> 
+        
+        </div>
+    </div>  
+</div>
+
+<tc_include file="Public:book" />
+
+<tc_include file="Public:kf" />
+
+<tc_include file="Public:footer" />
+
+<script  type="text/javascript" src="{:sp_get_host()}/js/calendar.js"></script>
+<script type="text/javascript" src="{:sp_get_host()}/js/public.js"></script>
+<link href="{:sp_get_host()}/js/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="{:sp_get_host()}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+	$(window).load(function(){
+		$("#content_Sroll").mCustomScrollbar({
+			scrollButtons:{
+				enable:true
+			},
+			theme:"dark" /*"light", "dark", "light-2", "dark-2", "light-thick", "dark-thick", "light-thin", "dark-thin"*/
+		});
+	});
+})(jQuery);
+</script>
+</body>
+</html>

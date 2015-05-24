@@ -1,0 +1,61 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('AdminBook/index')}">预订管理</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="16"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+	            <th width="30">ID</th>
+	            <th width="80"><span>姓名</span></th>
+	            <th width="120"><span>手机</span></th>
+	            <th width="80"><span>QQ</span></th>
+	            <th width="90">预订类型</th>
+	            <th width="90">居住时长</th>
+	            <th width="90"><span>抵达日期</span></th>
+	            <th width="160">预订留言</th>
+	            <th width="160"><span>IP位置/提交时间</span></th>
+	            <th width="50"><span>状态</span></th>
+	            <th width="60">操作</th>
+	          </tr>
+        </thead>
+        	<php>$status=array("1"=>"<span style='color:#75AA3A'>已审核</span>","0"=>"<span style='color:#CB1D23'>未审核</span>");</php>
+        	<foreach name="books" item="vo">
+	        	<tr>
+		            <td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+		            <td>{$vo.id}</td>
+		            <td>{$vo.name}</td>
+		            <td>{$vo.tel}</td>
+		            <td>
+		            	<a target="blank" href="tencent://message/?uin={$vo.qq}&Site=www.houniaowan.com.cn&Menu=yes"><img border="0" SRC=http://wpa.qq.com/pa?p=1:{$vo.qq}:5 alt="点击这里给我发消息"></a>
+		            	({$vo.qq})</td>
+		            <td>{$vo.booktype}</td>
+		            <td>{$vo.duration}</td>
+		            <td>{$vo.arrivedate}</td>
+		            <td>{$vo.content}</td>
+		            <td>{$vo.ip}<br /><span style="color:#36A7E8">{$vo.ip|ip2area=###}</span><br>{$vo.posttime|date='Y-m-d H:i',###}</td>
+		            <td>{$status[$vo['status']]}</td>
+		            <td>
+		            	<a href="{:U('AdminBook/delete',array('id'=>$vo['id']))}" class="J_ajax_del" >删除</a>
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+    <div class="form-actions">
+        <label class="checkbox inline" for="check_all"><input type="checkbox" class="J_check_all" data-direction="y" data-checklist="J_check_y" id="check_all">全选</label>                
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" data-action="{:u('AdminBook/check',array('check'=>1))}" data-subcheck="true">审核</button>
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" data-action="{:u('AdminBook/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" data-action="{:u('AdminBook/delete')}" data-subcheck="true" data-msg="你确定删除吗？">删除</button>
+    </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
